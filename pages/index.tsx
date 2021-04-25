@@ -1,65 +1,10 @@
-import Head from 'next/head'
+import Layout from '../components/Layout'
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    return (
+        <Layout>
+            <svg className={styles.logo} xmlns="http://www.w3.org/2000/svg" width="1100" height="250" viewBox="0 0 1100 250"><path fill="#DDD" d="M92.8 93.6h170.5v119.1H92.8z"/><circle fill="#FFF" cx="120.8" cy="149" r="24.2"/><circle fill="#FFF" cx="222.8" cy="149" r="24.2"/><path fill="#FFF100" d="M82.8 116.9c-19.6.2-35.4 16-35.4 35.6s15.8 35.5 35.4 35.6v-71.2zM272.1 121.1c18.4.1 33.4 15.1 33.4 33.6s-14.9 33.5-33.4 33.6v-67.2zM161.2 82h27.9c4.1-3.8 6.7-9.2 6.7-15.2 0-11.4-9.2-20.6-20.6-20.6-11.4 0-20.6 9.2-20.6 20.6 0 6 2.5 11.4 6.6 15.2z"/><path fill="#999" d="M248.5 91v110.3h-159V91h159m8.4-8.5H81.1v127.2h175.8V82.5z"/><path fill="#F39800" d="M117.7 130.3c8.8 0 15.9 7.1 15.9 15.9s-7.1 15.9-15.9 15.9-15.9-7.1-15.9-15.9 7.1-15.9 15.9-15.9m0-8.5c-13.4 0-24.3 10.9-24.3 24.3s10.9 24.3 24.3 24.3 24.3-10.9 24.3-24.3-10.9-24.3-24.3-24.3zM219.8 130.3c8.8 0 15.9 7.1 15.9 15.9s-7.1 15.9-15.9 15.9-15.9-7.1-15.9-15.9 7.2-15.9 15.9-15.9m0-8.5c-13.4 0-24.3 10.9-24.3 24.3s10.9 24.3 24.3 24.3 24.3-10.9 24.3-24.3-10.9-24.3-24.3-24.3zM270.1 116.5c12.9 3.7 22.3 15.6 22.3 29.6 0 14.1-9.5 25.9-22.3 29.6v-59.2m-8.4-9.6v78.6c21.7 0 39.2-17.6 39.2-39.3 0-21.7-17.6-39.3-39.2-39.3zM68.3 116.5v59.3C55.4 172.1 46 160.2 46 146.1c0-14 9.4-25.9 22.3-29.6m8.5-9.6c-21.7 0-39.2 17.6-39.2 39.3 0 21.7 17.6 39.3 39.2 39.3v-78.6z"/><path fill="#999" d="M184.9 188.3v13h-31.8v-13h31.8m8.4-8.5H144.7v29.9H193.3v-29.9z"/><path fill="#F39800" d="M169.3 45.4c8.8 0 15.9 7.1 15.9 15.9 0 3.4-1.1 6.7-3 9.3h-25.7c-2-2.7-3-5.9-3-9.3-.1-8.8 7.1-15.9 15.8-15.9m0-8.5c-13.4 0-24.3 10.9-24.3 24.3 0 7 3 13.4 7.7 17.8h33.1c4.8-4.4 7.7-10.8 7.7-17.8.1-13.4-10.8-24.3-24.2-24.3z"/><path fill="#DDD" d="M354.428 40.895v173.3h-9.5v-173.3zM398.5 107.1c-14.8 0-28.1 6-37.8 15.6v15.2c1.8-3 4-5.9 6.6-8.5 8.3-8.3 19.4-12.9 31.2-12.9s22.9 4.6 31.2 12.9 12.9 19.4 12.9 31.2-4.6 22.9-12.9 31.2-19.4 12.9-31.2 12.9-22.9-4.6-31.2-12.9c-2.6-2.6-4.8-5.4-6.6-8.5v15.2c9.7 9.7 23 15.6 37.8 15.6 29.6 0 53.6-24 53.6-53.6-.1-29.4-24-53.4-53.6-53.4zM486.308 107.064v107.1h-9.5v-107.1z"/><circle fill="#DDD" cx="481.6" cy="85" r="12.6"/><path fill="#DDD" d="M534.937 75.636v138.6h-9.5v-138.6z"/><path fill="#DDD" d="M519.2 97.6H535v9.5h-15.8zM541.3 97.6h18.9v9.5h-18.9zM605.108 40.915v173.3h-9.5v-173.3zM702.7 160.6c0-29.6-24-53.6-53.6-53.6-14.8 0-28.1 6-37.8 15.6v15.2c1.8-3 4-5.9 6.6-8.5 8.3-8.3 19.4-12.9 31.2-12.9s22.9 4.6 31.2 12.9 12.9 19.4 12.9 31.2h-.1v1.9c0 .4 0 .7-.1 1.1h.1V214h9.5v-51c.1-.8.1-1.6.1-2.4zM737.384 107.09v107.1h-9.5v-107.1z"/><circle fill="#DDD" cx="732.6" cy="85" r="12.6"/><path fill="#DDD" d="M786.159 75.614v138.6h-9.5v-138.6z"/><path fill="#DDD" d="M770.4 97.6h15.8v9.5h-15.8zM792.5 97.6h18.9v9.5h-18.9zM855.649 40.974v173.3h-9.5v-173.3zM884.2 141.9l-8 5.3 64.1 67h13.1z"/><path fill="#DDD" d="M936.5 107.1l-74.6 49.4v11.3l91.4-60.5v-.2zM988.226 107.046v107.1h-9.5v-107.1z"/><circle fill="#DDD" cx="983.5" cy="85" r="12.6"/><path fill="#DDD" d="M1037.237 75.636v138.6h-9.5v-138.6z"/><path fill="#DDD" d="M1021.5 97.6h15.8v9.5h-15.8zM1043.6 97.6h18.9v9.5h-18.9z"/><path fill="#333" d="M339.8 35.8h9.5v173.3h-9.5z"/><path fill="#E60012" d="M393.4 102c-14.8 0-28.1 6-37.8 15.6v15.2c1.8-3 4-5.9 6.6-8.5 8.3-8.3 19.4-12.9 31.2-12.9s22.9 4.6 31.2 12.9 12.9 19.4 12.9 31.2-4.6 22.9-12.9 31.2-19.4 12.9-31.2 12.9-22.9-4.6-31.2-12.9c-2.6-2.6-4.8-5.4-6.6-8.5v15.2c9.7 9.7 23 15.6 37.8 15.6 29.6 0 53.6-24 53.6-53.6-.1-29.5-24.1-53.4-53.6-53.4z"/><path fill="#333" d="M481.163 101.964v107.1h-9.5v-107.1z"/><circle fill="#F39800" cx="476.4" cy="79.9" r="12.6"/><path fill="#333" d="M529.892 70.436v138.6h-9.5v-138.6z"/><path fill="#333" d="M514.1 92.5h15.8v9.5h-15.8z"/><path fill="#8FC31F" d="M536.2 92.5h18.9v9.5h-18.9z"/><path fill="#333" d="M590.5 35.8h9.5v173.3h-9.5z"/><path fill="#094" d="M697.6 155.5c0-29.6-24-53.6-53.6-53.6-14.8 0-28.1 6-37.8 15.6v15.2c1.8-3 4-5.9 6.6-8.5 8.3-8.3 19.4-12.9 31.2-12.9s22.9 4.6 31.2 12.9 12.9 19.4 12.9 31.2h-.1v1.9c0 .4 0 .7-.1 1.1h.1v50.5h9.5v-51.2c.1-.6.1-1.4.1-2.2z"/><path fill="#333" d="M732.238 101.99v107.1h-9.5v-107.1z"/><circle fill="#F39800" cx="727.5" cy="79.9" r="12.6"/><path fill="#333" d="M781.113 70.414v138.6h-9.5v-138.6z"/><path fill="#333" d="M765.3 92.5h15.8v9.5h-15.8z"/><path fill="#009E96" d="M787.4 92.5h18.9v9.5h-18.9z"/><path fill="#333" d="M841 35.8h9.5v173.3H841z"/><path fill="#0068B7" d="M879.1 136.7l-8 5.3 64.1 67.1h13.1z"/><path fill="#00A0E9" d="M931.4 102l-74.6 49.4v11.3l91.3-60.5v-.2z"/><path fill="#333" d="M983.081 101.946v107.1h-9.5v-107.1z"/><circle fill="#F39800" cx="978.4" cy="79.9" r="12.6"/><path fill="#333" d="M1032.192 70.436v138.6h-9.5v-138.6z"/><path fill="#333" d="M1016.4 92.5h15.8v9.5h-15.8z"/><path fill="#E5004F" d="M1038.5 92.5h18.9v9.5h-18.9z"/></svg>
+        </Layout>
   )
 }

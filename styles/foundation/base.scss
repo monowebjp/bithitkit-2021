@@ -1,0 +1,11 @@
+@import 'node_modules/normalize-scss/sass/_normalize';
+
+html {
+  font-size: 62.5%;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
